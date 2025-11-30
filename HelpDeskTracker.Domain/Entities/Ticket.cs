@@ -13,8 +13,8 @@ namespace HelpDeskTracker.Domain.Entities
         public string Description { get; set; }
         public string Priority { get; set; }
         public DateTimeOffset CreateDate { get; set; }
-        public int AccountId { get; set; }
-        public Account Account { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
         public int EngineerId { get; set; }
         public Engineer Engineer { get; set; }
     }
