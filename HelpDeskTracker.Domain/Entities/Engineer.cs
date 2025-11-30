@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace HelpDeskTracker.Domain.Entities
 {
-    public class User : AuditableEntity
+    public class Engineer : AuditableEntity
     {
-        public string FirstName { get; set; } 
+        public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Type { get; set; } // e.g., Admin, Engineer, Customer
-        public string Password { get; set; }
         public string Email { get; set; }
-        public DateTimeOffset RegisterDate { get; set; }
+        public ICollection<Ticket> Tickets { get; set; }
     }
 }
